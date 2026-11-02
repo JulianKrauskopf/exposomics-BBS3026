@@ -1,6 +1,6 @@
 # BBS3026 — Session 1: Getting Started with R
-# Create a new R script: File -> New File -> R Script.
-# Save it as yourname.R and complete the missing parts.
+# Open this script in RStudio and save a personal copy as
+# 01_PubMed_Exercise_YourName.R. Complete the missing parts.
 # Run your code one task at a time (Ctrl+Enter / Cmd+Enter).
 
 # TASK 1 — Character vectors
