@@ -8,9 +8,7 @@ By the end of this session, you can create **character and numeric vectors**, co
 
 Install R and RStudio using the [setup guide](../SETUP.md).
 
-In RStudio, select **File → New File → R Script** and save the new script as **`yourname.R`** (replace *yourname* with your own name).
-
-Open [01_PubMed_Exercise.R](01_PubMed_Exercise.R) and copy the exercises into your own script. Complete each `...` or placeholder. Run a line or selection using **Ctrl+Enter** (Windows) or **Cmd+Enter** (macOS).
+Open [01_PubMed_Exercise.R](01_PubMed_Exercise.R) in RStudio and save a personal copy as **`01_PubMed_Exercise_YourName.R`** (replace *YourName* with your name). Work directly in that copy. Complete each `...` or placeholder. Run a line or selection using **Ctrl+Enter** (Windows) or **Cmd+Enter** (macOS).
 
 ## Your investigation
 
@@ -25,4 +23,4 @@ Open [01_PubMed_Exercise.R](01_PubMed_Exercise.R) and copy the exercises into yo
 
 Which health outcome has the most publications for each compound? Does a higher number of publications mean a compound causes that disease, or is more harmful?
 
-**Save and keep your completed `yourname.R` script.**
+**Save and keep your completed `01_PubMed_Exercise_YourName.R` script.**
