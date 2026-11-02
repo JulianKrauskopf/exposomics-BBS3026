@@ -3,6 +3,25 @@
 # Run one task at a time with Ctrl+Enter (Windows) / Cmd+Enter (macOS).
 # Save your completed script as 02_Exploratory_Analysis_YourName.R.
 
+# BEFORE YOU START — Set the working directory
+# Download the GitHub ZIP, extract it in Downloads, and find the course folder.
+# Replace YOUR_USERNAME and the folder name with the actual path on your computer.
+# Run ONLY ONE of the setwd() lines below (remove the # from that line).
+#
+# Windows example:
+# setwd("C:/Users/YOUR_USERNAME/Downloads/exposomics-BBS3026-main")
+#
+# macOS example:
+# setwd("/Users/YOUR_USERNAME/Downloads/exposomics-BBS3026-main")
+#
+# If you moved the extracted folder elsewhere, use its actual location.
+# The working directory should contain the "data" folder, NOT the Session 2 folder.
+getwd()
+file.exists("data/covar.csv")
+file.exists("data/expo.csv")
+# Both file.exists() checks should return TRUE before you continue.
+
+
 # TASK 1 — Load the packages
 # dplyr: filter, group_by, summarise; ggplot2: graphs; corrplot: correlations.
 library(...)
