@@ -171,51 +171,5 @@ corrplot(..., method = "number")
 # QUESTION: Which pair shows the strongest positive correlation?
 # QUESTION: Is the correlation stronger within certain classes of compounds (e.g. POPs or heavy metals)?
 
-# TASK 13 — Continuous participant characteristics
-# Plot age against your compound, separately for the two cohorts.
-ggplot(study, aes(x = age, y = .data[[my_compound]])) +
-  geom_point(alpha = 0.5) +
-  scale_y_log10() +
-  facet_wrap(~ ...) +
-  labs(y = my_compound)
-
-# Add a fitted straight line to the age plot.
-ggplot(study, aes(x = age, y = .data[[my_compound]])) +
-  geom_point(alpha = 0.5) +
-  geom_smooth(method = "...", se = FALSE) +
-  scale_y_log10() +
-  facet_wrap(~ cohort)
-
-# TRY IT: Repeat the scatterplot for BMI and alcohol consumption.
-# What patterns do you see? Are they similar across cohorts?
-
-# TASK 14 — Categorical participant characteristics
-# Make a boxplot for smoking status. Try education and activity too.
-ggplot(study, aes(x = smoking_status, y = .data[[my_compound]])) +
-  geom_boxplot() +
-  scale_y_log10() +
-  labs(x = "Smoking status", y = my_compound)
-
-# TASK 15 — Your first linear regression
-# A simple model describes how exposure changes with age.
-# The slope is the estimated change in exposure for one year of age.
-# We model log10 exposure here because the distributions are skewed.
-study$log10_selected_exposure <- log10(study[[my_compound]])
-
-model_age <- lm(log10_selected_exposure ~ ..., data = study)
-summary(model_age)
-
-# QUESTION: What is the age coefficient? Is it positive or negative?
-# QUESTION: What proportion of variation does R-squared describe?
-
-# Fit a second model with a categorical explanatory variable.
-model_smoking <- lm(log10_selected_exposure ~ ..., data = study)
-summary(model_smoking)
-
-# INTERPRETATION
-# What is the reference smoking-status category?
-# Are the coefficients differences between categories?
-# Is there evidence of an association? Association is not causation.
-
-# OPTIONAL CHALLENGE — Fit separate age models for Italy and Sweden.
-# Compare the age coefficients and R-squared values.
+# END OF SESSION 2
+# Continue with Session 3: 03_Exploratory_Analysis_II/03_Exploratory_Analysis_II.R
