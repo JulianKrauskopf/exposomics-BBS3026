@@ -2,7 +2,7 @@
 # Open the course folder in RStudio, then run:
 # source("R/setup_packages.R")
 
-packages <- c("tidyverse")
+packages <- c("dplyr", "ggplot2", "corrplot")
 missing <- packages[
   !vapply(packages, requireNamespace, logical(1), quietly = TRUE)
 ]
