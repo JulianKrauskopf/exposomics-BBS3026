@@ -1,6 +1,6 @@
 # Session 2 — Exploratory Analysis of the Study Population
 
-**Goal:** Describe the study population, explore measured environmental exposures and learn to interpret plots, correlations and simple linear regression.
+**Goal:** Describe the study population, explore measured environmental exposures and learn to interpret plots and correlations.
 
 This practical follows the exploratory-analysis tasks from the Session 2 lecture. Work in [02_Exploratory_Analysis.R](02_Exploratory_Analysis.R): fill in the missing R commands (`...`) and run the script **one task at a time**.
 
@@ -21,8 +21,6 @@ This practical follows the exploratory-analysis tasks from the Session 2 lecture
 | 4–6 | `table()`, `filter()`, `group_by()`, `summarise()` |
 | 7–10 | Exposure data, histograms, log10 scales, density plots |
 | 11–12 | Chemical scatterplots and `corrplot()` |
-| 13–14 | Exposure versus continuous and categorical characteristics |
-| 15 | `lm()`, slope, reference categories and R-squared |
 
 ### Study information
 
@@ -35,9 +33,9 @@ The measured exposure columns are **DDE, HCB, PCB, cadmium, lead**. Use one as y
 - How do the participant characteristics differ between sexes and cohorts?
 - Are exposure measurements normally distributed? What changes on a log10 scale?
 - Which exposures are correlated? Why is correlation not causation?
-- What does the coefficient in a simple regression model represent?
-- Can you compare associations in different cohorts without considering confounding?
 
-**Deliverable:** Your completed R script and a short written interpretation of one distribution plot, one chemical comparison and one regression result.
+**Deliverable:** Your completed R script and a short written interpretation of one distribution plot, one chemical comparison and one correlation result.
 
-*Note:* The log10 plots and models assume positive exposure values. Check the exposure data before applying a logarithm. The regression exercise is exploratory and does not demonstrate causality.
+**Next:** Continue with [Session 3 — Exploratory Analysis II](../03_Exploratory_Analysis_II/README.md) for scatterplots against covariates, linear regression and research-question development.
+
+*Note:* The log10 plots assume positive exposure values. Check the exposure data before applying a logarithm.
