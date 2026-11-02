@@ -169,7 +169,7 @@ correlation_matrix <- cor(..., use = "pairwise.complete.obs")
 corrplot(..., method = "number")
 
 # QUESTION: Which pair shows the strongest positive correlation?
-# QUESTION: Are any pairs negatively correlated?
+# QUESTION: Is the correlation stronger within certain classes of compounds (e.g. POPs or heavy metals)?
 
 # TASK 13 — Continuous participant characteristics
 # Plot age against your compound, separately for the two cohorts.
