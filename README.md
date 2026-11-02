@@ -21,4 +21,8 @@ Continue with [Session 2 instructions](02_Exploratory_Analysis/README.md) and th
 
 Continue with [Session 3 instructions](03_Exploratory_Analysis_II/README.md) and the interactive [regression R script](03_Exploratory_Analysis_II/03_Exploratory_Analysis_II.R). It loads the same data as Session 2, so you can start directly after opening the new script.
 
+## Session 4 — Transcriptomics Analysis I
+
+Continue with [Session 4 instructions](04_Transcriptomics/README.md) and the [interactive Open Targets / limma R script](04_Transcriptomics/04_Transcriptomics.R). Download the separate transcriptomics `.Rdata` file as described in [SETUP.md](SETUP.md). This session compares disease-focused gene sets and full-transcriptome results.
+
 **Note:** The number of PubMed publications is not a measure of how harmful a compound is.
