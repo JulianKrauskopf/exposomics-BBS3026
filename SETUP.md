@@ -1,6 +1,6 @@
 # Setup — R and RStudio
 
-Complete these steps before starting Session 1.
+Complete these steps before starting the practical sessions.
 
 ## 1. Install R
 
@@ -14,7 +14,7 @@ Download and install [RStudio Desktop](https://posit.co/download/rstudio-desktop
 
 On the [course GitHub page](https://github.com/JulianKrauskopf/exposomics-BBS3026), choose **Code → Download ZIP**. Extract the ZIP file and open the course folder in RStudio.
 
-## 4. Install the course package
+## 4. Install the course packages
 
 In the RStudio **Console**, run:
 
@@ -22,7 +22,9 @@ In the RStudio **Console**, run:
 source("R/setup_packages.R")
 ```
 
-You need an internet connection for installation. **The Session 1 exercise itself uses base R**, so no extra packages are needed for its tasks.
+You need an internet connection for installation. The setup installs **dplyr, ggplot2 and corrplot** for Session 2. **Session 1 uses base R**, so it does not require packages.
+
+The ZIP also contains both Session 2 datasets: `data/covar.csv` (participant characteristics) and `data/expo.csv` (exposure measurements). Keep them in the `data/` folder. Do not open or resave these CSVs in Excel.
 
 ## 5. Check your installation
 
