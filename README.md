@@ -17,4 +17,8 @@ You will use PubMed search counts to practice **vectors, data frames, filtering,
 
 Continue with [Session 2 instructions](02_Exploratory_Analysis/README.md) and the interactive [R exercise](02_Exploratory_Analysis/02_Exploratory_Analysis.R). The datasets `data/covar.csv` and `data/expo.csv` are included in this repository; no separate data download is needed.
 
+## Session 3 — Exploratory Analysis II
+
+Continue with [Session 3 instructions](03_Exploratory_Analysis_II/README.md) and the interactive [regression R script](03_Exploratory_Analysis_II/03_Exploratory_Analysis_II.R). It loads the same data as Session 2, so you can start directly after opening the new script.
+
 **Note:** The number of PubMed publications is not a measure of how harmful a compound is.
