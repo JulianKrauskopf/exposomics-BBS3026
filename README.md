@@ -29,4 +29,8 @@ Continue with [Session 4 instructions](04_Transcriptomics/README.md) and the [in
 
 Use [Session 5 instructions](05_Transcriptomics_II/README.md) and the [interactive result-interpretation and pathway-analysis R script](05_Transcriptomics_II/05_Transcriptomics_II.R). Continue from the two result CSVs saved in Session 4. Explore individual genes, Gene Ontology, Reactome pathways, overrepresentation analysis (ORA) and GSEA.
 
+## Session 6 — Cytoscape and Protein Networks
+
+Finish with [Session 6 instructions](06_Networks/README.md) and the [interactive Cytoscape / STRING network R script](06_Networks/06_Networks.R). Analyze protein interactions, explore hub proteins, compare confidence cutoffs and optionally overlay expression results on WikiPathways. **Install Cytoscape Desktop** and run the [setup check](R/check_cytoscape.R) before class.
+
 **Note:** The number of PubMed publications is not a measure of how harmful a compound is.
