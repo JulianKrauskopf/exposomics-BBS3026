@@ -14,21 +14,35 @@ map_results_to_entrez <- function(results) {
   # Remove an optional Ensembl version suffix.
   clean_keys <- sub("\\.[0-9]+$", "", keys)
   db <- org.Hs.eg.db::org.Hs.eg.db
-  # Determine whether the expression row names are gene symbols or Ensembl IDs.
-  symbol_ids <- AnnotationDbi::mapIds(
-    db, keys = unique(keys), column = "ENTREZID",
-    keytype = "SYMBOL", multiVals = "first"
-  )
-  ensembl_ids <- AnnotationDbi::mapIds(
-    db, keys = unique(clean_keys), column = "ENTREZID",
-    keytype = "ENSEMBL", multiVals = "first"
-  )
-  if (sum(!is.na(ensembl_ids)) > sum(!is.na(symbol_ids))) {
-    mapped <- unname(ensembl_ids[clean_keys])
-    key_type <- "ENSEMBL"
+  # Map gene symbols and Ensembl IDs independently. Query only IDs that
+  # actually exist in each annotation key space: mapIds() errors if *none*
+  # of its input keys are valid for that key type.
+  valid_symbols <- intersect(unique(keys[!is.na(keys)]),
+                             AnnotationDbi::keys(db, keytype = "SYMBOL"))
+  valid_ensembl <- intersect(unique(clean_keys[!is.na(clean_keys)]),
+                             AnnotationDbi::keys(db, keytype = "ENSEMBL"))
+
+  symbol_ids <- if (length(valid_symbols)) {
+    AnnotationDbi::mapIds(db, keys = valid_symbols, column = "ENTREZID",
+                          keytype = "SYMBOL", multiVals = "first")
   } else {
-    mapped <- unname(symbol_ids[keys])
-    key_type <- "SYMBOL"
+    setNames(character(), character())
+  }
+  ensembl_ids <- if (length(valid_ensembl)) {
+    AnnotationDbi::mapIds(db, keys = valid_ensembl, column = "ENTREZID",
+                          keytype = "ENSEMBL", multiVals = "first")
+  } else {
+    setNames(character(), character())
+  }
+
+  # Prefer the appropriate identifier format; allow mixed tables.
+  mapped_symbol <- unname(symbol_ids[keys])
+  mapped_ensembl <- unname(ensembl_ids[clean_keys])
+  mapped <- ifelse(!is.na(mapped_symbol), mapped_symbol, mapped_ensembl)
+  key_type <- if (sum(!is.na(mapped_symbol)) >= sum(!is.na(mapped_ensembl))) {
+    "SYMBOL (with Ensembl fallback)"
+  } else {
+    "ENSEMBL (with symbol fallback)"
   }
   out <- results
   out$ENTREZID <- as.character(mapped)
