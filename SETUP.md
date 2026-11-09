@@ -22,7 +22,7 @@ In the RStudio **Console**, run:
 source("R/setup_packages.R")
 ```
 
-You need an internet connection for installation. The setup installs **dplyr, ggplot2 and corrplot** for Session 2 and **httr, jsonlite and limma (Bioconductor)** for Session 4. **Session 1 uses base R**, so it does not require packages.
+You need an internet connection for installation. The setup installs **dplyr, ggplot2 and corrplot** for Session 2 and **httr, jsonlite and limma (Bioconductor)** for Session 4. For Session 5 it also installs **clusterProfiler, org.Hs.eg.db, AnnotationDbi, ReactomePA and enrichplot** from Bioconductor. The first installation may take several minutes. **Session 1 uses base R**, so it does not require packages.
 
 The ZIP also contains both Session 2 datasets: `data/covar.csv` (participant characteristics) and `data/expo.csv` (exposure measurements). Keep them in the `data/` folder. Do not open or resave these CSVs in Excel.
 
@@ -42,7 +42,13 @@ file.exists("data/EGM_Transcriptomics_GeneSymbol_Full.Rdata")
 
 All three checks should return `TRUE` before Session 4.
 
-## 6. Check your installation
+## 6. Continue with Session 5
+
+Session 5 reads **your own saved Session 4 results** from `outputs/session4_full_transcriptome.csv` and `outputs/session4_disease_focused.csv`. Complete **Task 15 of Session 4** first. These files are generated on your computer and are not included in GitHub.
+
+If you downloaded a fresh copy of the repository, copy your personal `outputs/` folder and the transcriptomics `.Rdata` file into it. Keep the same working directory for Session 5. The [Session 5 instructions](05_Transcriptomics_II/README.md) explain gene plots, GO analysis, Reactome pathways, ORA and GSEA.
+
+## 7. Check your installation
 
 Type `2 + 2` in the Console and press Enter. R should return `[1] 4`.
 
