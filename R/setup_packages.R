@@ -2,7 +2,7 @@
 # Open the course folder in RStudio, then run:
 # source("R/setup_packages.R")
 
-packages <- c("dplyr", "ggplot2", "corrplot", "httr", "jsonlite")
+packages <- c("dplyr", "ggplot2", "corrplot", "httr", "jsonlite", "igraph")
 missing <- packages[
   !vapply(packages, requireNamespace, logical(1), quietly = TRUE)
 ]
@@ -14,7 +14,7 @@ if (length(missing) > 0) {
 # Transcriptomics (Session 4) and functional enrichment (Session 5).
 # Bioconductor packages must be installed through BiocManager.
 bioc_packages <- c("limma", "clusterProfiler", "org.Hs.eg.db",
-                   "AnnotationDbi", "ReactomePA", "enrichplot")
+                   "AnnotationDbi", "ReactomePA", "enrichplot", "RCy3")
 missing_bioc <- bioc_packages[
   !vapply(bioc_packages, requireNamespace, logical(1), quietly = TRUE)
 ]
