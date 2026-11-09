@@ -25,4 +25,8 @@ Continue with [Session 3 instructions](03_Exploratory_Analysis_II/README.md) and
 
 Continue with [Session 4 instructions](04_Transcriptomics/README.md) and the [interactive Open Targets / limma R script](04_Transcriptomics/04_Transcriptomics.R). Download the separate transcriptomics `.Rdata` file as described in [SETUP.md](SETUP.md). This session compares disease-focused gene sets and full-transcriptome results.
 
+## Session 5 — Transcriptomics Analysis II
+
+Use [Session 5 instructions](05_Transcriptomics_II/README.md) and the [interactive result-interpretation and pathway-analysis R script](05_Transcriptomics_II/05_Transcriptomics_II.R). Continue from the two result CSVs saved in Session 4. Explore individual genes, Gene Ontology, Reactome pathways, overrepresentation analysis (ORA) and GSEA.
+
 **Note:** The number of PubMed publications is not a measure of how harmful a compound is.
